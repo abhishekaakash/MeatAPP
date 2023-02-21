@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+:root {
+    --primary: #1ba4bc;
+    --secondary:#0a090a;
+    --primary-dark:#3797a4;
+    --secondary-dark:#186396;
+    --off-white: #b2c5fa8e;
+	--blue: #cee397;
+    --navy:#13005A;
+    --blue:#00337C;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Lora', serif;
+}
+
+/*Nav Bar */
+.nav {
+    margin-top: 10px;
+    background-color: var(--primary);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.nav .active-link {
+    font-weight: bolder;
+    color: var(--secondary);
+}
+
+.nav .brand {
+    font-weight: bolder;
+    color: var(--green);
+}
+.nav li {
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+header {
+    padding: 2rem 1rem 2rem 1rem;
+    border-radius: 2rem;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+header h1{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+
+svg{
+    margin: 20px;
+}
+
+.profileImage{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    display: block;
+}
+
+
+.MainDiv{
+    margin: 1rem;
+}
+
+.MainDiv p{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+strong{
+    color: var(--primary);
+}
+
+blockquote{
+    color:var(--sea);
+    letter-spacing: 1px;
+}
+
+section {
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.body_container{
+    background-color: var(--secondary);
+}
+.body_container_{
+    align-items: center;
+    justify-content: center;
+    background-color: var(--off-white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+hr{
+    margin: 20px;
+}
+
+label{
+    margin: 20px;
+    font-weight: bolder;
+    color: var(--primary);
+}
+
+input{
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid var(--primary);   
+}
+
+h1,h2, h3{
+    margin: 20px;
+}
+
+p{
+    margin: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary);
+    letter-spacing: 0.1rem;
+}
+
+footer a:visited{
+    color: red;
+}
+
+.primary-link {
+    display: block;
+   color: #FFFFFF;
+   text-decoration: none;
+   font-size: 1.1rem;
+   padding: 0.5rem;
+}
+
+.secondary-link {
+   display: block;
+   color: var(--primary);
+   text-decoration: none;
+   font-size: 1.1rem;
+   padding: 0.5rem;
+}
+
+button{
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.btn-primary-outline{
+    border: 1px solid var(--primary);
+    background-color:#FFFFFF;
+    color: var(--primary);
+}
+
+.btn-primary-outline:hover{
+    border: 1px solid var(--primary);
+    background-color:var(--primary);
+    color: var(--white);
+}
+
+
+/** Projects Page **/
+
+.projects .date {
+    margin-bottom: -0.7rem;
+    font-size: 0.8rem;
+    
+ }
+
+/** footer **/
+
+footer {
+    text-align: center;
+}
+
+footer li {
+    list-style: none;
+    padding: 0.5rem;
+    display: inline;
+    color: var(--secondary-dark);
+}
+
+.tech button i{
+    font-size: 25px;
+}
+
+.tech button{
+    font-size: 25px;
+    font-family: inherit;
+}
+
+footer p, a{   
+    position: left;   
+}
+
+.footer-heading{
+    color: var(--primary);
+}
+
+footer i{
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+
+table, th, td{
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: right;
+    border: 2px solid var(--primary);
+}
+
+
+table thead:first-child tr{
+    background-color:var(--green);
+    font-size: large;
+}
+
+.education_style {
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.primaryHeading {
+    font-size: 2rem;
+}
+
+.secondaryHeading {
+    font-size: 1.25rem;
+}
+
+.courseName{
+    font-weight: bolder;
+    color: var(--secondary-dark);
+}
+.certificateName{
+    font-weight: bolder;
+    color: var(--secondary-dark);
+}
+
+.skillName{
+    font-weight: bolder;
+    color: var(--secondary-dark);
+}
+
+.highlightBox {
+    background-color: #1ba4bc;
+    color: white;
+    border-radius: 2px;
+    padding: 0.5rem;
+}
+
+.collegeName {
+    font-weight: bolder;
+    font-size: 1.75rem;
+}
+
+.badge {
+    width: 100px;
+    height: 100px;
+}
+
+.text-success{
+    color:var(--green);
+}
+
+.text-failure{
+    color:var(--secondary);
+}
+
+.img-success{
+    margin: 20px;
+    height: 300px;
+    width: 300px;
+    border: 5px solid var(--green);
+}
+
+.img-failure{
+    margin: 20px;
+    height: 300px;
+    width: 300px;
+    border: 5px solid var(--secondary);
+}
+
+.compName{
+    color: var(--blue);
+    text-decoration: underline;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.desRole{
+    color: var(--primary);
+    font-weight: bolder;
+}
+
+.respHeader{
+    color: var(--primary);
+}
+
+.resp{
+    margin: 20px;
+}
+
+.compProjects{
+    margin: 20px;
+}
+
+.projectHeader{
+    color: var(--primary);
+}
+
+.resp ul{
+    list-style-type:'✅';
+}
+
+.compProjects ul{
+    list-style-type: '✨';
+}
