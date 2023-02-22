@@ -75,4 +75,4 @@ def DFMeat_tab():
 
 
 if __name__ == "__main__":
-    meatApp.run(host='0.0.0.0', port=8080, debug=True)
+    meatApp.run(host='0.0.0.0', port=80, debug=True)
