@@ -2,162 +2,161 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link href="static/css/main.css" rel="stylesheet">
-   <title>Meat Prediction App</title>
-   <!--Favicon-->
-   <link rel="shortcut icon" href="static/pics/abhi_logo.png" type="image/x-icon">
-   <script src="https://kit.fontawesome.com/bd078e8e74.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="static/css/main.css" rel="stylesheet">
+    <title>Meat Prediction App</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="static/pics/abhi_logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/bd078e8e74.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-   <nav class="body_container body_container_ nav navbar">
-      <div>
-         <ul class="nav-items">
+<nav class="body_container body_container_ nav navbar">
+    <div>
+        <ul class="nav-items">
             <li><a href="index.html">Home</a></li>
             <li><a href="read_me.html">Read Me</a></li>
             <li><a href="#" class="nav active-link">Meat App</a></li>
             <li><a href="cv.html">My CV</a></li>
-         </ul>
-      </div>
-   </nav>
-   <main>
-    <h1><strong>Machine Learning Model to predict the Meat Type: </strong> </h1>
-    <p>Please upload the data set "meats.csv" in order to process the Machine Learning Model, it is prerequisites for the prediction model. </p>
+        </ul>
+    </div>
+</nav>
+<main>
+    <h1><strong>Machine Learning Model to predict the Meat Type: </strong></h1>
+    <p>Please upload the data set "meats.csv" in order to process the Machine Learning Model, it is prerequisites for
+        the prediction model. </p>
 
-       <div id="Meat" class="body_container body_container_">
-       <form action="{{ url_for('upload') }}" method = "POST" enctype = "multipart/form-data">
-       <label for="file">Data File:</label>
-   <input type="file" name="file">
-   <button class="btn-primary-outline">Upload Meat Data</button>
- <h2 class="text-success"> {{ result }} </h2>
-   </form>
-
-
-      <form action="{{ url_for('processML') }}" method = "POST" >
+    <div id="Meat" class="body_container body_container_">
+        <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+            <label for="file">Data File:</label>
+            <input type="file" name="file">
+            <button class="btn-primary-outline">Upload Meat Data</button>
+            <h2 class="text-success"> {{ result }} </h2>
+        </form>
 
 
-   <button class="btn-primary-outline">Process Meat Data</button>
-        {% if (error_code == 1) %}
+        <form action="{{ url_for('processML') }}" method="POST">
 
-            <H3 class="text-failure">{{error_message}}</H3>
 
-             {% elif error_code == 2 %}
-             <H3 class="text-failure">{{error_message}}</H3>
+            <button class="btn-primary-outline">Process Meat Data</button>
+            {% if (error_code == 1) %}
 
-<h2 class="text-success">   <p><a href="https://github.com/abhishekaakash/MeatAPP" target="_blank">You can download from git.</a></p></h2>
+                <H3 class="text-failure">{{ error_message }}</H3>
 
-        {% else %}
+            {% elif error_code == 2 %}
+                <H3 class="text-failure">{{ error_message }}</H3>
 
-        <h2 class="text-success"> {{MLAccuracy}} </h2>
-          {% endif %}
+                <h2 class="text-success"><p><a href="https://github.com/abhishekaakash/MeatAPP" target="_blank">You can
+                    download from git.</a></p></h2>
 
-   </form>
-       </div>
+            {% else %}
 
-       <br>
-      <div id="Meat" class="body_container body_container_">
-{#      <div id="Meat">#}
-         <h1><strong>Machine Learning Prediction:</strong> </h1>
-         <p>As per the best ML model accuracy, I am using ML Categorization Algorithm: "PLSRegression" </p>
-         <form action="{{ url_for('DFMeat_tab')}} " method="post" >
+                <h2 class="text-success"> {{ MLAccuracy }} </h2>
+            {% endif %}
+
+        </form>
+    </div>
+
+    <br>
+    <div id="Meat" class="body_container body_container_">
+
+        <h1><strong>Machine Learning Prediction:</strong></h1>
+        <p>As per the best ML model accuracy, I am using ML Categorization Algorithm: "PLSRegression" </p>
+        <form action="{{ url_for('DFMeat_tab') }} " method="post">
             <p>Hit Button "Meat Data" , then select one record from Meat test data to predict the meat's type. </p>
             <button type="submit" class="btn-primary-outline">Meat Data</button>
-               {% if (error_codeData == 1) %}
+            {% if (error_codeData == 1) %}
 
-            <H3 class="text-failure">{{error_message}}</H3>
+                <H3 class="text-failure">{{ error_message }}</H3>
 
-{#                   {% elif (error_codeData == 3) %}#}
-{##}
-{#                   <H3 class="text-failure">{{error_message}}</H3>#}
             {% else %}
 
-
-          {% endif %}
-
-         </form>
-      </div>
-         <hr />
-
-    <div id="datatable" >
-         <form action="{{ url_for('MLmeatPredict')}} " method="post" id="predict-label">
-
-
-                        {% if ((meataccuracy == 1)or(meataccuracy == 0)) %}
-                             <h1><strong><p>NIR data passed to Machine Learning without "Type" </p></strong> </h1>
-            {% else %}
 
             {% endif %}
-               <table>
-                  <tr>
-                     {% for i in meatdata %}
-                     <td>{{columns[loop.index]}}</td>
-                     {{ i | safe}}
-                     {% endfor %}
-                  </tr>
-               </table>
-            </div>
-            <hr />
+
+        </form>
+    </div>
+    <hr/>
+
+    <div id="datatable">
+        <form action="{{ url_for('MLmeatPredict') }} " method="post" id="predict-label">
+
 
             {% if ((meataccuracy == 1)or(meataccuracy == 0)) %}
+                <h1><strong><p>NIR data passed to Machine Learning without "Type" </p></strong></h1>
             {% else %}
-            <label for="rowSelected">Enter Row Number:</label>
-            <input type="text" id="rowSelected_id" placeholder="0-46" name="rowSelected" autofocus>
-            <p>Click on Predict in order to see result predicted by ML Model. </p>
-            <button type="submit" class="btn-primary-outline">Predict</button>
+
             {% endif %}
-         </form>
-         <br> <br>
+            <table>
+                <tr>
+                    {% for i in meatdata %}
+                        <td>{{ columns[loop.index] }}</td>
+                        {{ i | safe }}
+                    {% endfor %}
+                </tr>
+            </table>
+    </div>
+    <hr/>
+
+    {% if ((meataccuracy == 1)or(meataccuracy == 0)) %}
+    {% else %}
+        <label for="rowSelected">Enter Row Number:</label>
+        <input type="text" id="rowSelected_id" placeholder="0-46" name="rowSelected" autofocus>
+        <p>Click on Predict in order to see result predicted by ML Model. </p>
+        <button type="submit" class="btn-primary-outline">Predict</button>
+    {% endif %}
+    </form>
+    <br> <br>
 
 
-        <div id="my-div">
+    <div id="my-div">
 
 
+        {% if exceptionVar == null %}
+        {% else %}
+            <H3 class="text-failure">{{ exceptionVar }}</H3>
+        {% endif %}
+        {% if Mlresult == null %}
+        {% else %}
+            {% if meataccuracy == 1 %}
+                <h2 class="text-success"> {{ Mlresult }} </h2>
+                <img src="../static/pics/success.gif" class="img-success" alt="Success">
+            {% else %}
+                <h2 class="text-failure"> {{ Mlresult }} </h2>
+                <img src="../static/pics/failure.gif" alt="failure" class="img-failure">
+            {% endif %}
+        {% endif %}
+    </div>
 
 
-         {% if exceptionVar == null %}
-         {% else %}
-         <H3 class="text-failure">{{exceptionVar}}</H3>
-         {% endif %}
-         {% if Mlresult == null %}
-         {% else%}
-         {% if meataccuracy == 1 %}
-         <h2 class="text-success"> {{ Mlresult }} </h2>
-         <img src="../static/pics/success.gif" class="img-success" alt="Success">
-         {% else %}
-         <h2 class="text-failure"> {{ Mlresult }} </h2>
-         <img src="../static/pics/failure.gif" alt="failure" class="img-failure">
-         {% endif %}
-         {% endif %}
-   </div>
+    </div>
 
+    <footer>
+        <h2 class="footer-heading">Reach Me on Socials @ </h2>
+        <ul class="footer-lists">
+            <li><a href="https://www.linkedin.com/in/abhishek-kumar-39546416/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/abhishek.aakash/" target="_blank"><i
+                    class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/abhishekaakash" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        <p><a href="https://github.com/abhishekaakash" target="_blank"> &copy; 2023 Copyright by Abhishek Kumar </a>
+        </p>
+    </footer>
+    <script>
+        var my_element = document.getElementById("my-div");
 
-      </div>
+        my_element.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+            inline: "end"
+        });
+    </script>
 
-  <footer>
-    <h2 class="footer-heading">Reach Me on Socials @ </h2>
-    <ul class="footer-lists">
-      <li><a href="https://www.linkedin.com/in/abhishek-kumar-39546416/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </li>
-      <li><a href="https://www.instagram.com/abhishek.aakash/" target="_blank"><i class="fab fa-instagram"></i></a> </li>
-      <li><a href="https://twitter.com/abhishekaakash" target="_blank"><i class="fab fa-twitter"></i></a> </li>
-    </ul>
-    <p><a href="https://github.com/abhishekaakash" target="_blank"> &copy; 2023 Copyright by Abhishek Kumar </a>
-    </p>
-  </footer>
-   <script>
- var my_element = document.getElementById("my-div");
-
-my_element.scrollIntoView({
-  behavior: "smooth",
-  block: "end",
-  inline: "end"
-});
- </script>
-
-   </main>
+</main>
 
 </body>
 </html>
