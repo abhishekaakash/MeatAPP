@@ -179,6 +179,9 @@ def upload():
             meatfilename = meatfile.filename
             print('meatfilename  :  ', meatfilename)
             print(f" upload folder path is ) {meatApp.config['data_upload']}")
+
+            if meatfilename is None:
+                return render_template('meatType_prediction.html', error_message=f'Please browse file Meats.csv then Retry! ', error_code=2)
             meatfile.save(os.path.join(meatApp.config['data_upload'], meatfilename))
 
             pass
