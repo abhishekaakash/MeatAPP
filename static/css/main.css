@@ -8,8 +8,11 @@
 	--blue: #cee397;
     --navy:#13005A;
     --blue:#00337C;
+
+    --white:#FFFFFF;
     --green: #00FF00;
     --red: #FF0000;
+    --darkgreen: #006400;
 }
 
 
@@ -41,7 +44,7 @@ body{
 
 .nav .brand {
     font-weight: bolder;
-    color: var(--green);
+    color: var(--darkgreen);
 }
 .nav li {
     display: inline-block;
@@ -89,7 +92,7 @@ strong{
 }
 
 blockquote{
-    color:var(--sea);
+    color:var(--secondary);
     letter-spacing: 1px;
 }
 
@@ -126,6 +129,9 @@ input{
 
 h1,h2, h3{
     margin: 20px;
+}
+.text-left{
+    text-align: left;
 }
 
 p{
@@ -188,6 +194,10 @@ button{
     
  }
 
+.dataImage{
+    width:300px;
+}
+
 /** footer **/
 
 footer {
@@ -211,7 +221,7 @@ footer li {
 }
 
 footer p, a{   
-    position: left;   
+    text-align: center;
 }
 
 .footer-heading{
@@ -239,6 +249,7 @@ table thead:first-child tr{
 
 .education_style {
     border: 1px solid #FFFFFF;
+    border-radius: 20px ;
     background-color: #FFFFFF;
 }
 
@@ -282,7 +293,7 @@ table thead:first-child tr{
 }
 
 .text-success{
-    color:var(--green);
+    color:var(--darkgreen);
 }
 
 .text-failure{
@@ -293,7 +304,7 @@ table thead:first-child tr{
     margin: 20px;
     height: 300px;
     width: 300px;
-    border: 5px solid var(--green);
+    border: 5px solid var(--darkgreen);
 }
 
 .img-failure{

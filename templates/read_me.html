@@ -27,11 +27,40 @@
     </div>
   </nav>
   <main>
-    <header>
-      <h1><strong>APP to predict the Meat. </strong></h1>
-      <blockquote><q><i>This is the continuation of research done on Meat Analysis to predict the Meat type on the basis
-            of NIR data. </i></q></blockquote>
+    <header >
+      <h1 class="text-left"><strong>Machine Learning Model to predict the Type of Meat. </strong></h1>
+      <p class="text-left">"This is the continuation of research done on Meat Analysis to predict the Meat type on the basis
+            of NIR data."</p>
+        <p class="text-left"><a href="https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSRegression.html" target="_blank"> Sklearn.cross_decomposition.PLSRegression</a></p>
+        <br/>
+        <img src="../static/pics/ML_performances.png" alt="ML Performance image" class="dataImage"/>
+        <img src="../static/pics/DATA_PLS_N_PARAMETER.png" alt="Data PLS N Parameter" class="dataImage"/>
     </header>
+
+      <div class="body_container body_container_">
+            <h1>How it works? </h1>
+          <h3>Go to <a href="meatType_prediction.html"><b><u>Meat App</u></b></a></h3>
+<p>
+<strong>Step 1 :</strong> Upload meats.csv file by browsing the file and hit "Upload Meat Data"
+</p>
+          <p>
+              <strong>Step 2 :</strong> Run the system to create Machine Learning Model.
+           By hitting the "Process Meat Data, system will run the Machine Learning Algorithm to create model.
+		   Code will also create Train and Test dataset.
+		   Test data set will be used in next step.
+		   At the end it will show the accuracy of the Machine Learning model.
+          </p>
+          <p>
+<strong>Step 3 :</strong> To predict the type of a record of NIR data , Hit button "Meat Data"
+         Table will be made available for the user along with the record number as first column.
+		 User can enter the record number "Enter Row Number" text field and then hit button predict to see the result.
+         Result will be shown along with success/failure related image and the row used for prediction.
+
+
+          </p>
+
+      </div>
+    <br/>
     <div class="body_container body_container_">
       <h1>Project Information: </h1>
       <svg width="240" height="51" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 51">
@@ -56,18 +85,34 @@
       <h3>Mentor - Narayan Devkota </h3>
       <h3>Developer - Abhishek Kumar </h3>
     </div>
+
+      <br>
+      <div class="body_container body_container_">
+      <h1>Bibliography: </h1>
+
+
+          <p> Singh, Manokamna, and Katarina Domijan. "Comparison of machine learning models in food authentication studies." 2019 30th Irish Signals and Systems Conference (ISSC). IEEE, 2019.</p>
+          <p> J. McElhinney, G. Downey and T. Fearn, "Chemometric processing of visible and near infrared reflectance spectra for species identification in selected raw homogenised meats", Journal of Near Infrared Spectroscopy, vol. 7, pp. 145-154, 1999.</p>
+
+          <p> <a href="https://www.kdnuggets.com/2022/09/dimensionality-reduction-techniques-data-science.html target="_blank"">Dimension Reduction Method</a></p>
+         <p>  <a href=" https://scikit-learn.org/stable/modules/classes.html" target="_blank"> Scikit API</a></p>
+      </div>
+
+
+
+
   </main>
 
 
   <footer>
     <h2 class="footer-heading">Reach Me on Socials @ </h2>
     <ul class="footer-lists">
-      <li><a href="https://www.linkedin.com/in/abhishek-kumar-39546416/"><i class="fab fa-linkedin"></i></a>
+      <li><a href="https://www.linkedin.com/in/abhishek-kumar-39546416/" target="_blank"><i class="fab fa-linkedin"></i></a>
       </li>
-      <li><a href="https://www.instagram.com/abhishek.aakash/"><i class="fab fa-instagram"></i></a> </li>
-      <li><a href="https://twitter.com/abhishekaakash"><i class="fab fa-twitter"></i></a> </li>
+      <li><a href="https://www.instagram.com/abhishek.aakash/" target="_blank"><i class="fab fa-instagram"></i></a> </li>
+      <li><a href="https://twitter.com/abhishekaakash" target="_blank"><i class="fab fa-twitter"></i></a> </li>
     </ul>
-    <p><a href="https://github.com/abhishekaakash"> &copy; 2023 Copyright by Abhishek Kumar </a>
+    <p><a href="https://github.com/abhishekaakash" target="_blank"> &copy; 2023 Copyright by Abhishek Kumar </a>
     </p>
   </footer>
   </main>
